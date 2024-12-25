@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <!-- Font Awesome for button icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="music-player">
+        <h2>My Music Player</h2>
+
+        <!-- Audio player -->
+        <audio id="audio" src="" controls></audio>
+
+        <!-- Current Song and Artist -->
+        <div id="trackInfo">
+            <p id="songName">Song Name</p>
+            <p id="artistName" style="font: italic;">Artist Name</p>
+        </div>
+
+        <div class="controls">
+            <button id="prevButton" title="Previous">
+                <i class="fas fa-backward"></i> <!-- Previous Icon -->
+            </button>
+            <button id="playButton" title="Play">
+                <i class="fas fa-play"></i> <!-- Play Icon -->
+            </button>
+            <button id="pauseButton" title="Pause" style="display: none;">
+                <i class="fas fa-pause"></i> <!-- Pause Icon -->
+            </button>
+            <button id="nextButton" title="Next">
+                <i class="fas fa-forward"></i> <!-- Next Icon -->
+            </button>
+            <br>
+            <label for="volumeControl">Volume: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+        </div>
+
+        <div class="progress-bar">
+            <input type="range" id="progress" value="0" step="0.1" min="0" max="100">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
